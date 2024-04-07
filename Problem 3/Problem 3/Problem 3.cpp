@@ -1,107 +1,72 @@
 // Michael Sexton
 // Problem 3
 
-
 #include <iostream>
-#include <queue>
+#include <thread>
+#include <mutex>
+#include <chrono>
+#include <vector>
 
 using namespace std;
 
-class AirTrafficController {
-private:
-    bool asleep; // Whether the ATC is asleep or not
-    int trafficPattern; // Number of aircraft in the traffic pattern
+mutex mtx;
+bool ATC_awake = false;
+int traffic_pattern = 0;
 
-public:
-    AirTrafficController() : asleep(true), trafficPattern(0) {}
-
-    // Pilot initiates communication with ATC
-    void initiateCommunication(int AircraftNumber) {
-        if (asleep) {
-            asleep = false;
+void ATC() {
+    while (true) {
+        mtx.lock();
+        if (traffic_pattern == 0) {
+            cout << "ATC is asleep." << endl;
+            ATC_awake = false;
         }
-        cout << "Aircraft #" << AircraftNumber << " is requesting to land" << endl;
+        mtx.unlock();
+        this_thread::sleep_for(chrono::seconds(1));
     }
+}
 
-    // ATC starts communication with a pilot
-    void startCommunication() {
-        if (!asleep) {
-            cout << "ATC is talking to a pilot." << endl;
+void pilot(int id) {
+    while (true) {
+        mtx.lock();
+        if (!ATC_awake) {
+            cout << "Aircraft " << id << " is waking up ATC." << endl;
+            cout << "Aircraft " << id << " requests landing." << endl;
+            ATC_awake = true;
+            mtx.unlock();
+            this_thread::sleep_for(chrono::seconds(2)); // Simulate communication with ATC
+            mtx.lock();
+            traffic_pattern++;
+            cout << "Aircraft " << id << " enters the traffic pattern." << endl;
+            mtx.unlock();
+            
         }
-    }
-
-    // ATC finishes communication with a pilot
-    void finishCommunication(int AircraftNumber) {
-        cout << "ATC finished talking to Pilot " << AircraftNumber << "." << endl;
-        asleep = true;
-    }
-
-    // Check if the traffic pattern is full
-    bool isTrafficPatternFull() {
-        return trafficPattern >= 3;
-    }
-
-    // Add an aircraft to the traffic pattern
-    void addAircraft(int AircraftNumber) {
-        if (trafficPattern < 3) {
-            ++trafficPattern;
-            cout << "Aircraft with Pilot " << AircraftNumber << " entered the traffic pattern." << endl;
+        else if (traffic_pattern < 3) {
+            cout << "Aircraft " << id << " requests landing." << endl;
+            cout << "Aircraft " << id << " enters the traffic pattern." << endl;
+            traffic_pattern++;
+            mtx.unlock();
+            
         }
-    }
-
-    // Remove an aircraft from the traffic pattern
-    void removeAircraft(int AircraftNumber) {
-        if (trafficPattern > 0) {
-            --trafficPattern;
-            cout << "Aircraft with Pilot " << AircraftNumber << " left the traffic pattern." << endl;
+        else {
+            cout << "Aircraft " << id << " requests landing." << endl;
+            cout << "Aircraft " << id << " needs to divert to other airports." << endl;
+            mtx.unlock();
+            break;
         }
+        this_thread::sleep_for(chrono::seconds(2));
     }
-};
+}
 
 int main() {
-    AirTrafficController atc;
-    queue<int> arrivalTimes; // Arrival times of aircraft
-
-    // Generate arrival times and pilot numbers for 10 aircraft
-    for (int i = 1; i <= 10; ++i) {
-        arrivalTimes.push(i);
+    traffic_pattern = 0; // Initialize traffic pattern as empty
+    thread ATC_thread(ATC);
+    vector<thread> aircraft_threads;
+    for (int i = 0; i < 10; ++i) {
+        aircraft_threads.push_back(thread(pilot, i + 1));
     }
-
-    // Simulation loop
-    while (!arrivalTimes.empty()) {
-        int currentTime = arrivalTimes.front();
-        arrivalTimes.pop();
-        cout << "Current time: " << currentTime << "s" << endl;
-
-        // Check if there is an incoming aircraft
-        if (!arrivalTimes.empty()) {
-            int nextArrival = arrivalTimes.front();
-            // If the next arrival is now or after the current time
-            if (nextArrival <= currentTime) {
-                int AircraftNumber = arrivalTimes.size() + 1; // Assign pilot number
-                // Pilot initiates communication
-                atc.initiateCommunication(AircraftNumber);
-
-                // If ATC is talking to another pilot, try again later
-                if (atc.isTrafficPatternFull()) {
-                    cout << "Traffic pattern is full. Aircraft with Pilot " << AircraftNumber << " needs to divert to other airports." << endl;
-                }
-                else {
-                    // Otherwise, add the aircraft to the traffic pattern
-                    atc.addAircraft(AircraftNumber);
-                }
-            }
-        }
-
-        // If the ATC finishes talking to a pilot, remove the aircraft from the traffic pattern
-        atc.finishCommunication(arrivalTimes.size() + 1);
-        atc.removeAircraft(arrivalTimes.size() + 1);
-
-        // Check if all aircraft have arrived
-        if (arrivalTimes.empty()) {
-            cout << "All aircraft have arrived." << endl;
-        }
+    for (int i = 0; i < 10; ++i) {
+        aircraft_threads[i].join();
     }
-
+    ATC_thread.join();
     return 0;
 }
