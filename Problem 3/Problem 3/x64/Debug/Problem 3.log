@@ -1,0 +1,5 @@
+﻿  Problem 3.cpp
+C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 3\Problem 3\Problem 3.cpp(81,36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 3\Problem 3\Problem 3.cpp(97,53): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 3\Problem 3\Problem 3.cpp(98,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Problem 3.vcxproj -> C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 3\x64\Debug\Problem 3.exe
