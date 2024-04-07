@@ -1,0 +1,3 @@
+If the robot gets assigned a new task directly after completing its last task, then the physical problem would be a lack of tool availability if a tool is grabbed by another robot. In the physical world, this can cause unnecessary waiting or delays in production. In the code, issues could arise with the registering of the tools and their availability. Depending on the timing of the task and how quickly the robots register the tool change, runtime errors could happen.
+
+A solution that could prevent the data inconsistencies from happening is to implement a check statement to verify that the required tools are available before the robot starts the new task. This would prevent the robots from having runtime inconsistencies based on the timing of robots picking up the tools.

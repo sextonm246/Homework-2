@@ -1,0 +1,3 @@
+In this code, there could be issues using the locks improperly. This could cause the threads to wait for each other after the code runs through, causing the program to just hang open indefinitely. During the running of the code, there could be issues with the variables of ATC_awake and traffic_pattern basedm on the timing of the executable lines. This inconsistency could cause the output to not accurately reflect the scenario. 
+
+To avoid the issue with locks, proper locking mechanisms such as mutexes could be used. Ensuring that locks are properly released to avoid deadlocks is also essential to preventing issues from occurring. Another way to prevent problems from happening with the execution of the code is to make sure that all of the executables are thread-safe.

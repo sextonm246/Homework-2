@@ -8,7 +8,6 @@
 
 using namespace std;
 
-// Declare mutex object outside of the function
 mutex mtx;
 
 // Function to simulate the task performed by a robot
@@ -18,8 +17,8 @@ void performTask(int robotNumber, vector<bool>& tools, int& time) {
         cout << "Robot " << robotNumber << " is collecting data." << endl;
     }
 
-    int leftToolIndex = (robotNumber + 3) % 5; // Index of left tool
-    int rightToolIndex = (robotNumber + 2) % 5; // Index of right tool
+    int leftToolIndex = (robotNumber + 3) % 5; // left tool
+    int rightToolIndex = (robotNumber + 2) % 5; // right tool
 
     // Acquire tools
     {
