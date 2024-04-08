@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/glew-populate"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/dea19df8f469b84d05752943299d5ce2/glew-populate.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/59aec17722a66646f7b8e97eafe9ac6e/glew-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glew-subbuild/CMakeFiles/3fc12232d0719e25016c4bbc545e93f6/glew-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glew-populate"
+		],
+		"name" : "glew-populate"
+	}
+}

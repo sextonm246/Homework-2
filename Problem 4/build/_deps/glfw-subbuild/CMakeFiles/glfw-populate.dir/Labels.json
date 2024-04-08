@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/5d69a19e363cb7e7d31cafad18a2551f/glfw-populate.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/83f328848b929b390450278d2ccc8bf2/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/b959767a3ee151e5716bd94bdbd67df1/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

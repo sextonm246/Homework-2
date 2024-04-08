@@ -1,0 +1,10 @@
+^C:\USERS\SEXTO\ONEDRIVE\DESKTOP\CLASSES\AEROSPACE 424\HOMEWORK 2\PROBLEM 4\BUILD\_DEPS\GLFW-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild" "-BC:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild" --check-stamp-file "C:/Users/sexto/OneDrive/Desktop/Classes/Aerospace 424/Homework 2/Problem 4/build/_deps/glfw-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

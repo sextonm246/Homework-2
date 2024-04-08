@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 4\main.cpp(41,49): warning C4305: '+=': truncation from 'double' to 'float'
+  OpenGLExample.vcxproj -> C:\Users\sexto\OneDrive\Desktop\Classes\Aerospace 424\Homework 2\Problem 4\build\Debug\OpenGLExample.exe
